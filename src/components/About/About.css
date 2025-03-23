@@ -1,0 +1,209 @@
+/* Background and Section Styling */
+.about-section {
+    background: radial-gradient(circle at center, #0a0f30 30%, transparent 100%),
+    radial-gradient(circle at top left, rgba(0, 255, 255, 0.155), transparent 50%),
+    radial-gradient(circle at top right, rgba(255, 20, 145, 0.164), transparent 50%),
+    radial-gradient(circle at bottom left, rgba(138, 43, 226, 0.4), transparent 50%),
+    linear-gradient(to right, #1a1645, #0e0d1d, #24243e);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a55eea;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+/* Content Layout */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Left Text Content */
+.text-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+/* Name and Heading */
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.highlight {
+    color: #a55eea;
+}
+
+/* Description */
+.description {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 28px;
+    margin-top: 25px;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.4s;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.4);
+}
+
+/* Remove right margin for the last button */
+.btn:last-child {
+    margin-right: 0;
+}
+
+/* Button Styles */
+.btn-primary,
+.btn-secondary {
+    background: linear-gradient(45deg, #ff00ff, #8000ff);
+    color: white;
+    border: 2px solid transparent;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    background: transparent;
+    border: 2px solid #ff00ff;
+    color: #ff00ff;
+    box-shadow: 0px 0px 25px rgba(255, 0, 255, 0.7);
+}
+
+/* Profile Image */
+.image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.profile-photo-container1 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff00ff, #8000ff, #4a90e2);
+    padding: 5px;
+    box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.7);
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Stats Section */
+/* .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    flex-wrap: wrap;
+} */
+
+/* Individual Stat Box */
+/* .stat-box {
+    background: #1a1a2e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(255, 0, 255, 0.2);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0px 6px 15px rgba(255, 0, 255, 0.3);
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #a55eea;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: #bbb;
+    animation: fadeIn 1.5s ease-in-out;
+} */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .profile-photo-container {
+        width: 140px;
+        height: 140px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-box {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+}

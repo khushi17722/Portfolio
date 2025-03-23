@@ -1,0 +1,331 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background with dark gradient */
+#header {
+    background: radial-gradient(circle at center, #0a0f30 30%, transparent 100%),
+        radial-gradient(circle at top left, rgba(0, 255, 255, 0.155), transparent 50%),
+        radial-gradient(circle at top right, rgba(255, 20, 145, 0.164), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(138, 43, 226, 0.4), transparent 50%),
+        linear-gradient(to right, #1a1645, #0e0d1d, #24243e);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 60px 40px;
+}
+
+/* Container */
+.section-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+/* Left Side Content */
+.header-info {
+    max-width: 600px;
+}
+
+/* Gradient Header Text */
+.header-info-top {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 14px;
+    background: linear-gradient(90deg, #8766ff, #4a90e2, #a55eea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+}
+
+/* Title */
+.header-title {
+    font-size: 4.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #632b63, #8000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+/* Subtitle */
+.title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #7f59f2;
+    margin-top: 10px;
+}
+
+/* Description */
+.header-description {
+    font-size: 1.3rem;
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* Hero Icons */
+.hero-icons {
+    display: flex;
+    gap: 15px;
+    /* justify-content: center; */
+    margin-top: 20px;
+}
+
+/* Icon Button Styles */
+.icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff00ff, #8000ff);
+    color: white;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 0, 255, 0.3);
+    text-decoration: none;
+    font-size: 1.2rem;
+    transform: rotate(0deg);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.icon:hover {
+    background: rgba(6, 2, 6, 0.2);
+    border-color: #ff00ff;
+    color: #ff00ff;
+    box-shadow: 0px 6px 20px rgba(255, 0, 255, 0.6);
+    /* transform: rotate(360deg) scale(1.1); */
+    backface-visibility: hidden;
+    transform-origin: center;
+}
+
+.icon:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(255, 0, 255, 0.4);
+}
+
+/* Profile Image Section */
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-photo-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ff00ff, #8000ff, #4a90e2);
+    padding: 5px;
+    box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.7);
+}
+
+.profile-photo-container:hover {
+    transform: scale(1.07);
+    box-shadow: 0px 0px 35px rgba(138, 43, 226, 0.9);
+}
+
+/* Profile Image */
+.profile-photo {
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(138, 43, 226, 0.8);
+    opacity: 0.9;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input,
+form textarea {
+    padding: 15px;
+    font-size: 1rem;
+    background-color: #2b2d3d;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    border-color: #7f59f2;
+}
+
+form button {
+    background-color: #7f59f2;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background-color: #4a90e2;
+    transform: scale(1.05);
+}
+
+form button:active {
+    transform: scale(0.95);
+}
+
+/* Glowing Text */
+.color-primary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #8000ff;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .section-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-title {
+        font-size: 3.8rem;
+    }
+
+    .header-info-top {
+        font-size: 1.8rem;
+    }
+
+    .header-description {
+        font-size: 1.2rem;
+    }
+
+    .profile-photo {
+        width: 280px;
+        height: 280px;
+    }
+
+    .profile-wrapper {
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-info {
+        max-width: 100%;
+    }
+
+    .header-title {
+        font-size: 3.5rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .profile-photo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .profile-wrapper {
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-title {
+        font-size: 3rem;
+    }
+
+    .header-info-top {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .header-description {
+        font-size: 1rem;
+    }
+
+    .profile-photo {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-wrapper {
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 12px 18px;
+        font-size: 0.95rem;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header-title {
+        font-size: 2.8rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .header-description {
+        font-size: 0.95rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-wrapper {
+        margin-top: 10px;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}
