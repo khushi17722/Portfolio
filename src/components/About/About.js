@@ -1,52 +1,42 @@
 import React from "react";
-import "./About.css"; // Import the external CSS file
-
-
-// const statsData = [
-//   { number: 11, label: "Total Projects" },
-//   { number: 7, label: "Certificates" },
-//   { number: 3, label: "Years of Experience" }
-// ];
+import "./About.css";
+// import profileImage from "./profile-placeholder.jpg";
+// import userAvatar from "./avatar-placeholder.jpg"; // Small profile image
 
 const About = () => {
   return (
     <section className="about-section">
+     <div>
+     <p className="passion">Driven by Passion</p>
+     </div>
+       <p className="about-badge">About Me</p>
       <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <p className="section-subtitle">✨ Transforming ideas into digital experiences. ✨</p>
-
         <div className="content-wrapper">
+          {/* Profile Image */}
+          <div className="image-wrapper">
+            <div className="profilephotocontainer">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMmLQ1liZsB1dJTPSd_hBBdasqOFNXgv-7AA&s"
+              alt="Profile" className="profilephoto" />
+            </div>
+            <div className="experience-badge">3+ Years Experience</div>
+          </div>
+
+          {/* Text Content */}
           <div className="text-content">
+           
             <h1 className="main-title">
-             <span className="highlight">Khushi Jain</span>
+            Innovative  And <span className="highlight">Passionate </span>   Designer
             </h1>
             <p className="description">
-              Seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang tertarik dalam pengembangan Front-End.
-              Saya berfokus pada menciptakan pengalaman digital yang menarik dan selalu berusaha memberikan solusi terbaik.
+            Check out my latest projects and expertise in web design & development! Explore my portfolio to find innovative, user-friendly, and high-performing web solutions tailored to your needs. </p>
+            <p className="description">
+            Custom Web Development. 24/7 Support. Secure & Scalable Solutions. Get a Free Consultation.
             </p>
-            <div className="buttons">
-              <button className="btn btn-primary">Download CV</button>
-              <button className="btn btn-secondary">View Projects</button>
-            </div>
-          </div>
-
-          <div className="image-wrapper">
-            <div className="profile-photo-container1">
-              <img src="profile-placeholder.jpg" alt="Profile" className="profile-photo" />
-            </div>
+          
+            <button className="button">MORE ABOUT →</button>
           </div>
         </div>
-
-        {/* <div className="stats">
-      {statsData.map((stat, index) => (
-        <div key={index} className="stat-box">
-          <p className="stat-number">{stat.number}</p>
-          <p className="stat-label">{stat.label}</p>
-        </div>
-      ))}
-    </div> */}
-    </div>
-    
+      </div>
     </section>
   );
 };

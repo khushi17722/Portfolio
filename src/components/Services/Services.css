@@ -1,0 +1,126 @@
+/* MyServices.css */
+
+.services-section {
+  text-align: center;
+  background-color: rgb(1, 2, 11);
+  padding: 45px;
+  color: white;
+}
+
+.section-subtitle {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #a55eea;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 4px;
+}
+
+.service-card {
+  background: rgba(54, 42, 74, 0.598);
+  padding: 38px;
+  line-height: 24px;
+  border-radius: 12px;
+  width: 435px;
+  height: 300px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 15px; /* Add gap to the left */
+  margin-right: 15px; /* Add gap to the right */
+  transition: transform 0.3s ease-in-out;
+}
+
+
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  background: white;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+}
+
+.service-image {
+  width: 60px;
+  height: 60px;
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 16px;
+  opacity: 0.9;
+  color: white;
+}
+
+.icon-container {
+  padding: 10px;
+  border-radius: 50%;
+  border: 3px solid rgb(244, 212, 212);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px;
+  color: white;
+}
+
+.icon-container svg, .icon-container i {
+  width: 40px;
+  height: 40px;
+  fill: white;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-container {
+    justify-content: center;
+  }
+
+  .service-card {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}

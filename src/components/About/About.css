@@ -1,209 +1,209 @@
-/* Background and Section Styling */
-.about-section {
-    background: radial-gradient(circle at center, #0a0f30 30%, transparent 100%),
-    radial-gradient(circle at top left, rgba(0, 255, 255, 0.155), transparent 50%),
-    radial-gradient(circle at top right, rgba(255, 20, 145, 0.164), transparent 50%),
-    radial-gradient(circle at bottom left, rgba(138, 43, 226, 0.4), transparent 50%),
-    linear-gradient(to right, #1a1645, #0e0d1d, #24243e);
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-}
-
-/* Container */
-.container {
-    max-width: 1100px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Section Title */
-.section-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #a55eea;
-}
-
-.section-subtitle {
-    font-size: 1rem;
-    color: #bbb;
-    margin-bottom: 30px;
-}
-
-/* Content Layout */
-.content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    text-align: left;
-}
-
-/* Left Text Content */
-.text-content {
-    flex: 1;
-    max-width: 550px;
-}
-
-/* Name and Heading */
-.main-title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-}
-
-.highlight {
-    color: #a55eea;
-}
-
-/* Description */
-.description {
-    font-size: 1.2rem;
-    color: #ddd;
-    margin-top: 10px;
-}
-
-/* Buttons */
-.buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 16px 28px;
-    margin-top: 25px;
-    margin-right: 15px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: 0.4s;
-    border: 2px solid transparent;
-    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.4);
-}
-
-/* Remove right margin for the last button */
-.btn:last-child {
-    margin-right: 0;
-}
-
-/* Button Styles */
-.btn-primary,
-.btn-secondary {
-    background: linear-gradient(45deg, #ff00ff, #8000ff);
-    color: white;
-    border: 2px solid transparent;
-}
-
-.btn-primary:hover,
-.btn-secondary:hover {
-    background: transparent;
-    border: 2px solid #ff00ff;
-    color: #ff00ff;
-    box-shadow: 0px 0px 25px rgba(255, 0, 255, 0.7);
-}
-
-/* Profile Image */
-.image-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.profile-photo-container1 {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: linear-gradient(135deg, #ff00ff, #8000ff, #4a90e2);
-    padding: 5px;
-    box-shadow: 0px 0px 15px rgba(138, 43, 226, 0.7);
-}
-
-.profile-photo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/* Stats Section */
-/* .stats {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 40px;
-    flex-wrap: wrap;
-} */
-
-/* Individual Stat Box */
-/* .stat-box {
-    background: #1a1a2e;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(255, 0, 255, 0.2);
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.stat-box:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0px 6px 15px rgba(255, 0, 255, 0.3);
-}
-
-.stat-number {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #a55eea;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.stat-label {
-    font-size: 1rem;
-    color: #bbb;
-    animation: fadeIn 1.5s ease-in-out;
-} */
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
+    .about-section {
+        background-color: #000000;
+        padding: 80px 5%;
+        color: #fff;
         text-align: center;
     }
 
+    .about-heading {
+        font-size: 50px;
+        font-weight: 900;
+        margin-bottom: 40px;
+        text-align: center;
+        color: white; /* Ensures heading stays white */
+    }
+
+    .passion{
+    
+        padding: 10px 18px;
+        font-size: 22px;
+        display: inline-block;
+        color: white;
+        font-weight: bold;
+        /* margin-top: ; */
+    }
+
+    .container {
+        max-width: 1400px;
+        /* border: 2px solid red; */
+        margin: auto;
+    }
+
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+
+    .image-wrapper {
+        position: relative;
+        max-width: 470px;
+        height: 440px;
+    }
+
+    .profilephotocontainer {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0px 0px 40px rgba(59, 130, 246, 0.3);
+    }
+
+    .profilephoto {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .experience-badge {
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        transform: translateX(-50%);
+        background:#a55eea;
+        padding: 12px 24px;
+        border-radius: 12px;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        color: white;
+        box-shadow: 0px 5px 15px rgba(168, 59, 246, 0.5);
+    }
+
     .text-content {
-        max-width: 100%;
+        max-width: 800px;
+        text-align: left;
+        margin-bottom: 180px;
+    }
+
+    .about-badge {
+        /* background: rgba(114, 54, 130, 0.2); */
+        padding: 10px 22px;
+        border-radius: 20px;
+        font-size: 35px;
+        display: inline-block;
+        color: #a55eea;
+        font-weight: bold;
+        margin-bottom: 50px;
     }
 
     .main-title {
-        font-size: 2.5rem;
+        font-size: 42px;
+        font-weight: 800;
+        margin: 12px 0;
+        line-height: 1.2;
+        color: white;
     }
 
-    .profile-photo-container {
-        width: 140px;
-        height: 140px;
+    .highlight {
+        color: #a55eea;
     }
 
-    .stats {
-        flex-direction: column;
+    .description {
+        font-size: 18px;
+        margin-bottom: 20px;
+        opacity: 0.8;
+        line-height: 1.6;
+    }
+
+    .user-info {
+        display: flex;
         align-items: center;
+        margin-top: 20px;
+        gap: 12px;
     }
 
-    .stat-box {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px 0;
+    .user-name {
+        font-weight: bold;
+        font-size: 18px;
+        color: #3b82f6;
     }
-}
+
+    .user-role {
+        font-size: 15px;
+        opacity: 0.8;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+
+    .button {
+        padding: 14px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease-in-out; /* Smooth transition for color, background, and transform */
+        text-decoration: none;
+        border: 2px solid transparent; /* Transparent border */
+        background-color: #a55eea; /* Purple background */
+        color: white; /* White text */
+    }
+    
+    .button:hover {
+        background-color: #3e124d; /* Darker purple on hover */
+        transform: scale(1.05); /* Slight scale effect on hover */
+    }
+    
+    .button:active {
+        transform: scale(0.95); /* Slight shrink effect on click */
+    }
+    
+
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .content-wrapper {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .experience-badge {
+            bottom: -15px;
+        }
+
+        .text-content {
+            max-width: 100%;
+        }
+
+        .buttons {
+            justify-content: center;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .about-heading {
+            font-size: 40px;
+        }
+
+        .main-title {
+            font-size: 32px;
+        }
+
+        .description {
+            font-size: 16px;
+        }
+
+        .btn {
+            font-size: 16px;
+            padding: 12px 20px;
+        }
+        .profilephotocontainer{
+            height: 350px;
+            width: 350px;
+            margin-top: 20px;
+        }
+        .experience-badge{
+            margin-bottom: 120px;
+        }
+        .text-content{
+            margin-bottom: 100px;
+            gap: 10px;
+        }
+    }

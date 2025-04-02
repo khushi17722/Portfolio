@@ -4,6 +4,9 @@ import "./Navbar.css";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+
+  // coding 
+  
   return (
     <nav className="navbar">
       {/* Logo */}
@@ -16,12 +19,12 @@ const Navbar = () => {
 
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/Home">Home</a></li>
+        <li><a href="/About">About</a></li>
+        <li><a href="/Services">Services</a></li>
+        <li><a href="/Education">Education</a></li>
+        <li><a href="/Project">Project</a></li>
+        <li><a href="/Contact">Contact</a></li>
       </ul>
     </nav>
   );

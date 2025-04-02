@@ -1,74 +1,102 @@
-// ContactPage.js
-import React, { useState } from 'react';
-import './Contact.css';
+import React, { useState } from "react";
+import "./Contact.css"; // Importing the CSS file
+import { div } from "framer-motion/client";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    firstName: "",
+    lastName: "",
+    email: "",
+    subject: "",
+    message: "",
   });
+
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Normally, you'd send this data to a server here
-    console.log('Form submitted with:', formData);
+    if (formData.firstName && formData.email && formData.message) {
+      setSubmitted(true);
+      console.log("Form Submitted:", formData);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } else {
+      alert("Please fill in all required fields.");
+    }
   };
 
   return (
-    <div className="contact-page">
-      <div className="contact-info">
-        <h1>Contact Us</h1>
-        <p>We'd love to hear from you!</p>
+    <div className="img-container">
+      <div className="contact-container">
+        <h3 className="contact-heading">We Love to Hear You</h3>
+        <h2 className="contact-subheading">Contact</h2>
+        <div className="contact-box">
+          {submitted ? (
+            <p className="success-message">
+              Thank you for reaching out! We'll get back to you soon.
+            </p>
+          ) : (
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="form-group">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label htmlFor="name">Your Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Enter your name"
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Your Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Your Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Enter your message"
-              value={formData.message}
-              onChange={handleChange}
-            ></textarea>
-          </div>
-          <button type="submit" className="submit-btn">Submit</button>
-        </form>
+              <div className="form-group">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                />
+              </div>
 
-        <div className="social-media">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows="4"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
+
+              <button className="btn" type="submit">
+                SEND MESSAGE
+              </button>
+            </form>
+          )}
         </div>
       </div>
     </div>
