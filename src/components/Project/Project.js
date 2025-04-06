@@ -48,6 +48,7 @@ const projects = [
 
 const ProjectContainer = () => {
   return (
+    <section className="project-section" id="projects">
     <div className="project-wrapper">
       <h3 className="portfolio-heading">Portfolio Showcase</h3>
       <h2 className="recent-projects-heading">Recent Projects</h2>
@@ -76,6 +77,7 @@ const ProjectContainer = () => {
         ))}
       </div>
     </div>
+    </section>
   );
 };
 

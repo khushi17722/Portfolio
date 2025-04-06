@@ -1,21 +1,29 @@
 import React from "react";
+// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Hero/Hero";
+import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
+import Education from "./components/Education/Education";
 import Project from "./components/Project/Project";
 import Contact from "./components/Contact/Contact";
 
+
 const App = () => {
   return (
-    <div style={{ margin: 0, padding: 0, boxSizing: "border-box", overflow: "hidden" }}>
-      <Navbar />
-      <Home />
+    <div className="maindiv">
+      <div>
+        <Navbar />
+      </div>
+
+      <Hero />
       <About />
       <Services />
+      <Education />
       <Project />
       <Contact />
+    
     </div>
   );
 };

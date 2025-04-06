@@ -1,106 +1,61 @@
-import React, { useState } from "react";
-import "./Contact.css"; // Importing the CSS file
-import { div } from "framer-motion/client";
+import React from "react";
+import './Contact.css'; // External stylesheet
 
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (formData.firstName && formData.email && formData.message) {
-      setSubmitted(true);
-      console.log("Form Submitted:", formData);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } else {
-      alert("Please fill in all required fields.");
-    }
-  };
-
+const ContactForm = () => {
   return (
-    <div className="img-container">
+    <div className="page-wrapper">
       <div className="contact-container">
-        <h3 className="contact-heading">We Love to Hear You</h3>
-        <h2 className="contact-subheading">Contact</h2>
-        <div className="contact-box">
-          {submitted ? (
-            <p className="success-message">
-              Thank you for reaching out! We'll get back to you soon.
-            </p>
-          ) : (
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-group">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name"
-                  value={formData.firstName}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name"
-                  value={formData.lastName}
-                  onChange={handleChange}
-                />
+        <div className="contact-card">
+          {/* Left Side */}
+          <div className="contact-left">
+            <img
+              src="https://via.placeholder.com/300x400"
+              alt="Profile"
+              className="profile-img"
+            />
+            <div className="contact-info">
+              <p>WRITE AN E-MAIL</p>
+              <h4>sample@domain.com</h4>
+              <p>CALL ME</p>
+              <h4>+044 9696 9696 3636</h4>
+              <div className="social-icons">
+                <a href="#"><i className="fab fa-facebook-f"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                <a href="#"><i className="fab fa-instagram"></i></a>
               </div>
+            </div>
+          </div>
 
+          {/* Right Side */}
+          <div className="contact-right">
+            <h2>Let’s Discuss Your Project</h2>
+            <p>Always available for freelancing if the right project comes along. Feel free to contact me.</p>
+            <div className="form-row">
               <div className="form-group">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-                <input
-                  type="text"
-                  name="subject"
-                  placeholder="Subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                />
+                <input type="text" placeholder="Name" />
               </div>
-
-              <textarea
-                name="message"
-                placeholder="Message"
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-                required
-              ></textarea>
-
-              <button className="btn" type="submit">
-                SEND MESSAGE
-              </button>
-            </form>
-          )}
+              <div className="form-group">
+                <input type="email" placeholder="Email" />
+              </div>
+            </div>
+            <div className="form-group">
+              <input type="text" placeholder="Subject" />
+            </div>
+            <div className="form-group">
+              <textarea placeholder="Message"></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+          </div>
         </div>
       </div>
+
+      {/* Footer outside contact-container */}
+      <footer className="contact-footer">
+        © 2025 Your Name. All rights reserved.
+      </footer>
     </div>
   );
 };
 
-export default Contact;
+export default ContactForm;

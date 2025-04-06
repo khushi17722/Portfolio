@@ -1,41 +1,51 @@
 import React from "react";
 import "./About.css";
-// import profileImage from "./profile-placeholder.jpg";
-// import userAvatar from "./avatar-placeholder.jpg"; // Small profile image
+
 
 const About = () => {
   return (
     <section className="about-section">
-     <div>
-     <p className="passion">Driven by Passion</p>
-     </div>
-       <p className="about-badge">About Me</p>
-      <div className="container">
-        <div className="content-wrapper">
-          {/* Profile Image */}
-          <div className="image-wrapper">
-            <div className="profilephotocontainer">
-              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMmLQ1liZsB1dJTPSd_hBBdasqOFNXgv-7AA&s"
-              alt="Profile" className="profilephoto" />
+      <div className="about-container">
+        <div className="about-left">
+          <div className="circle-bg left"></div>
+          <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMmLQ1liZsB1dJTPSd_hBBdasqOFNXgv-7AA&s"
+             alt="Profile" />
+        </div>
+
+        <div className="about-right">
+          <div className="label">ABOUT US</div>
+          <h1>
+            I AM AVAILABLE FOR <span className="highlight">UI UX DESIGN</span> PROJECTS
+          </h1>
+          <p>
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those
+            interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero
+            are also reproduced in their exact original form, accompanied by English versions from
+            the 1914 translation by H. Rackham.
+          </p>
+
+          <div className="about-stats">
+            <div className="stat-box">
+              <strong>280+</strong>
+              <br />
+              Google Review
             </div>
-            <div className="experience-badge">3+ Years Experience</div>
+            <div className="stat-box">
+              <strong>15+</strong>
+              <br />
+              Years Experience
+            </div>
+            <div className="stat-box">
+              <strong>49+</strong>
+              <br />
+              Award Winning
+            </div>
           </div>
 
-          {/* Text Content */}
-          <div className="text-content">
-           
-            <h1 className="main-title">
-            Innovative  And <span className="highlight">Passionate </span>   Designer
-            </h1>
-            <p className="description">
-            Check out my latest projects and expertise in web design & development! Explore my portfolio to find innovative, user-friendly, and high-performing web solutions tailored to your needs. </p>
-            <p className="description">
-            Custom Web Development. 24/7 Support. Secure & Scalable Solutions. Get a Free Consultation.
-            </p>
-          
-            <button className="button">MORE ABOUT →</button>
-          </div>
+          <button className="contact-button">GET IN TOUCH →</button>
         </div>
+
+        <div className="circle-bg right"></div>
       </div>
     </section>
   );
